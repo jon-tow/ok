@@ -1,22 +1,29 @@
 // `ok` is a command line tool that uses the OpenAI API to generate shell commands
 // and other command line utilities.
 //
+// NOTE: Make sure your OpenAI auth key is in your environment.
+//
+//    export OPENAI_API_KEY=sk-***********
+//
 // Dependencies:
 //
-// json-c: https://github.com/json-c/json-c
-//      - Install (mac): `brew install json-c`
-// libcurl: http://curl.haxx.se/libcurl/c
+//    - json-c: https://github.com/json-c/json-c
+//      Install (mac): `brew install json-c`
+//
+//    - libcurl: http://curl.haxx.se/libcurl/c
 //
 // Build:
 //
-// mkdir build; cd build; cmake ..
-// make; chmod 777 ok
+//    mkdir build; cd build; cmake ..
+//    make; chmod 777 ok
 //
-// Optional: Copy it to somewhere in your PATH: cp ok /usr/local/bin
+// Optionally, copy it to somewhere in your PATH:
+//
+//    cp ok /usr/local/bin
 //
 // Example:
 //
-// ok how do i delete a branch in git
+//    ok how do i delete a branch in git
 
 #include <cstdlib>
 #include <curl/curl.h>
